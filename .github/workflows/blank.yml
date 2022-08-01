@@ -8,7 +8,5 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-#      - uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        run: echo ${{ github.event.push.GITHUB_REF }}
+      - name: Print info
+        run: echo "'${{ github.ref_name }}' was pushed by '${{ github.actor }}'"
