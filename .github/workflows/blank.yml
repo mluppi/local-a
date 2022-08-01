@@ -8,5 +8,9 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
+    
       - name: Print info
         run: echo "'${{ github.ref_name }}' was pushed by '${{ github.actor }}'"
+
+      - name: Print info
+        run: echo "'${{ github.event.push.ref }}' was pushed by '${{ github.event.push.pusher }}'"
