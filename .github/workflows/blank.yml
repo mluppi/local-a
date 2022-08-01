@@ -13,4 +13,4 @@ jobs:
         run: echo "'${{ github.ref_name }}' was pushed by '${{ github.actor }}'"
 
       - name: Print info
-        run: echo "'${{ github.event.ref }}' was pushed by '${{ github.event.pusher.name }}'"
+        run: echo "'${GITHUB_REF#refs/heads/}' was pushed by '${{ github.event.pusher.name }}'"
