@@ -1,16 +1,12 @@
-name: pull-info
+name: show-push-info
 
 on:
   push:
-    branches: [ "main" ]
 
 jobs:
-  info:
+  print-info:
     runs-on: ubuntu-latest
     steps:
     
       - name: Print info
-        run: echo "'${{ github.ref_name }}' was pushed by '${{ github.actor }}'"
-
-      - name: Print info
-        run: echo "'${GITHUB_REF#refs/heads/}' was pushed by '${{ github.event.pusher.name }}'"
+        run: echo "'${{ github.ref_name }}' was pushed by '${{ github.event.pusher.name }}'"
